@@ -1,3 +1,4 @@
+import events.ProgressEvent;
 
 extern class FileReader {
 	
@@ -5,12 +6,12 @@ extern class FileReader {
 	static var LOADING : Int;
 	static var DONE : Int;
 	
-	dynamic function onloadstart( e : Dynamic ) : Void;
-	dynamic function onprogress( e : Dynamic ) : Void;
-	dynamic function onabort( e : Dynamic ) : Void;
-	dynamic function onerror( e : Dynamic ) : Void;
-	dynamic function onload( e : Dynamic ) : Void;
-	dynamic function onloadend( e : Dynamic ) : Void;
+	dynamic function onloadstart( e : ProgressEvent ) : Void;
+	dynamic function onprogress( e : ProgressEvent ) : Void;
+	dynamic function onabort( e : ProgressEvent ) : Void;
+	dynamic function onerror( e : ProgressEvent ) : Void;
+	dynamic function onload( e : ProgressEvent ) : Void;
+	dynamic function onloadend( e : ProgressEvent ) : Void;
 	
 	var readyState(default,null) : Int;
 	var result(default,null) : Dynamic;
