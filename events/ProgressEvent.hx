@@ -5,7 +5,8 @@ package events;
  * @author Skial Bainn
  */
 
-typedef ProgressEvent = { > Event,
+@:native('ProgressEvent')
+typedef ProgressEvent = { > Event#if HaxeDiff <FileReader> #end,
 	var lengthComputable:Bool;
 	var loaded:Float;
 	var total:Float;
